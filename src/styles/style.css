@@ -1,0 +1,245 @@
+@import 'tailwindcss';
+
+.app-container {
+  @apply bg-gray-200 w-full min-h-screen px-6
+}
+
+.auth-page-container {
+  @apply w-full h-screen flex justify-center items-center
+}
+
+.auth-page-wrapper {
+  @apply bg-white rounded-md w-3xl h-72 flex py-6 shadow-lg
+}
+
+.app-title {
+  @apply w-1/2 flex flex-col justify-center items-center
+}
+
+.app-title > h3 {
+  @apply text-5xl text-blue-700 font-semibold
+}
+
+.app-title > h2 {
+  @apply text-2xl font-light
+}
+
+.auth-form {
+  @apply w-1/2 h-full px-10
+}
+
+.auth-form > form {
+  @apply w-full h-full flex flex-col justify-between
+}
+
+.auth-form > form > h3 {
+  @apply font-semibold text-2xl border-b-2 py-1
+}
+
+.auth-form > form > div {
+  @apply h-full flex flex-col justify-center items-center space-y-1.5
+}
+
+.auth-form > form > div > input {
+  @apply w-full px-2 py-0.5 bg-gray-50 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-700
+}
+
+.auth-form > form > div > button, .add-thread-input-wrapper > button, .comment-input-show-hide > button {
+  @apply w-full bg-blue-600 text-white py-1 rounded-md hover:bg-blue-700 hover:shadow-lg transition duration-100 ease-in-out cursor-pointer
+}
+
+.auth-form > form > p {
+  @apply font-light
+}
+
+.auth-form > form > p > a {
+  @apply font-normal text-blue-500
+}
+
+.auth-form > form > p > a:hover {
+  @apply text-blue-700 underline
+}
+
+.home-page, .detail-page, .leaderboard-page {
+  @apply px-6 py-12 w-full flex flex-row justify-between
+}
+
+.split-to-right {
+  @apply h-lvh top-0 right-0 flex flex-col justify-between bg-gray-100 fixed p-6 w-sm
+}
+
+.thread-list, .leaderboard-list {
+  @apply w-2/3 h-fit flex flex-col space-y-2
+}
+
+.thread-item-wrapper {
+  @apply w-full h-40 bg-gray-50 rounded-sm p-4 hover:bg-gray-100 hover:shadow-xl transition duration-100 ease-in-out cursor-pointer
+}
+
+.thread-item-content {
+  @apply h-full overflow-hidden space-y-2
+}
+
+.thread-item-content > header, .thread-detail > header {
+  @apply flex flex-row space-x-4 w-full
+}
+
+.avatar-wrapper {
+  @apply size-15
+}
+
+.header-caption-wrapper > div, .thread-detail-header-caption > div {
+  @apply flex space-x-1 font-light
+}
+
+.thread-item-title {
+  @apply font-semibold text-blue-700
+}
+
+.thread-item-content > article {
+  @apply h-1/4 overflow-hidden text-ellipsis whitespace-nowrap line-clamp-1
+}
+
+.thread-item-info-wrapper {
+  @apply flex flex-col items-end
+}
+
+.thread-item-comment-count {
+  @apply font-light
+}
+
+.add-thread-input-wrapper {
+  @apply flex flex-col
+}
+
+.add-thread-input-wrapper > h2 {
+  @apply font-semibold text-2xl pb-2
+}
+
+.add-thread-input-title, .comment-input-trigger {
+  @apply w-full border-b-2 border-b-blue-700 py-1 px-2 focus:outline-none focus:ring-0
+}
+
+.add-thread-input-body, .add-thread-input-category {
+  @apply bg-gray-50 w-full py-1 px-2 rounded-sm focus:outline-none focus:ring-0
+}
+
+.add-thread-input-body-wrapper > div, .comment-input-show-hide > div {
+  @apply flex flex-col items-end mb-1
+}
+
+.add-thread-input-body {
+  @apply h-64 resize-none
+}
+
+.add-thread-input-category {
+  @apply my-2 border-t border-t-gray-50 focus:border-t-blue-700 focus:rounded-t-none
+}
+
+.navigation {
+  @apply flex flex-col space-y-2
+}
+
+.navigation > div > a, .navigation > div > button {
+  @apply px-1 rounded-md flex items-center space-x-1 w-fit hover:bg-gray-300 hover:shadow-md transition duration-200
+}
+
+.navigation > div > button {
+  @apply cursor-pointer
+}
+
+.thread-detail {
+  @apply w-2/3 h-fit
+}
+
+.thread-detail-header-caption > h3 {
+  @apply font-semibold text-2xl text-blue-700
+}
+
+.thread-detail > article {
+  @apply p-3 border-b border-b-blue-700
+}
+
+.vote-thread {
+  @apply flex px-3 pt-2 justify-end space-x-3
+}
+
+.vote-thread > div, .vote-comment > div {
+  @apply flex space-x-1
+}
+
+.vote-thread > div > button, .vote-comment > div > button {
+  @apply text-lg cursor-pointer
+}
+
+.comment-input-wrapper {
+  @apply py-2
+}
+
+.comment-input-show-hide {
+  @apply px-6 absolute z-50 bg-gray-100 h-lvh w-full left-0
+}
+
+.comment-input-content {
+  @apply bg-gray-50 py-1 px-2 h-40 w-full resize-none focus:outline-none focus:ring-0
+}
+
+.comment-list {
+  @apply flex flex-col bg-gray-50 rounded-md h-105 overflow-y-scroll
+}
+
+.comment-inner {
+  @apply px-3 pt-3
+}
+
+.comment-inner > article {
+  @apply px-2 py-1
+}
+
+.comment-header, .comment-header-caption {
+  @apply flex space-x-1 items-center
+}
+
+.comment-header-avatar > img {
+  @apply size-8 rounded-full
+}
+
+.comment-author {
+  @apply font-semibold
+}
+
+.comment-posted {
+  @apply font-light
+}
+
+.no-comment-info {
+  @apply h-full flex justify-center items-center
+}
+
+.no-comment-info > label {
+  @apply font-light
+}
+
+.vote-comment {
+  @apply flex px-2 py-1 justify-end border-b
+}
+
+.leaderboard-list > h2 {
+  @apply pb-2 text-center text-3xl font-semibold border-b-2 border-b-blue-700
+}
+
+.leaderboard-list > ol {
+  @apply flex flex-col items-center
+}
+
+.leaderboard-list > ol > li {
+  @apply w-4/5 bg-gray-100 p-3 my-3 shadow-xl rounded flex justify-between
+}
+
+.leaderboard-list-icon-avatar {
+  @apply flex gap-3
+}
+
+.rank-icon {
+  @apply text-3xl
+}
