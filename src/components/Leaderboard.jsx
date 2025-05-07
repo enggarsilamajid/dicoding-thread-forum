@@ -1,20 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Navigation } from './Navigation';
 
 const getRankIcon = (rank) => {
   switch (rank) {
-    case 0:
-      return '🥇';
-    case 1:
-      return '🥈';
-    case 2:
-      return '🥉';
-    default:
-      return '';
+  case 0:
+    return '🥇';
+  case 1:
+    return '🥈';
+  case 2:
+    return '🥉';
+  default:
+    return '';
   }
 };
 
-function Leaderboard ({ leaderboard }) {
+function Leaderboard({ leaderboard }) {
   const top3 = leaderboard.slice(0, 3);
 
   return (
@@ -54,6 +55,17 @@ function Leaderboard ({ leaderboard }) {
       </div>
     </>
   );
+};
+
+Leaderboard.propTypes = {
+  leaderboard: PropTypes.arrayOf(
+    PropTypes.shape({
+      userId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      totalScore: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export { Leaderboard };
