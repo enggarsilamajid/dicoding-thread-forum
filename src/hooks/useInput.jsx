@@ -11,7 +11,7 @@ function useInput(defaultValue = '') {
     setValue(defaultValue);
   }
 
-  return [value, handleValueChange, reset];
+  return [value, reset];
 }
 
 
