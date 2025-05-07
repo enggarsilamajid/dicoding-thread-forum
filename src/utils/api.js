@@ -1,5 +1,5 @@
 const api = (() => {
-  const BASE_URL = '/v1';
+  const BASE_URL = 'https://forum-api.dicoding.dev/v1';
 
   async function _fetchWithAuth(url, options = {}) {
     const token = getAccessToken();

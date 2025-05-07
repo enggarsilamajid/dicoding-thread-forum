@@ -10,15 +10,5 @@ export default defineConfig({
   ],
   test: {
     environment: 'jsdom',
-  },
-  server: {
-    proxy: {
-      '/v1': {
-        target: 'https://forum-api.dicoding.dev',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/v1/, '/v1'),
-      },
-    },
-  },
+  }
 });
